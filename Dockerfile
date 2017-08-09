@@ -3,7 +3,7 @@ MAINTAINER think@hotmail.de
 
 ENV \
   AFFDEX_DATA_DIR=/affdex-sdk/data \
-  AFFECTIVA_SDK_VERSION=3.1.1-2802
+  AFFECTIVA_SDK_VERSION=3.3-40
 COPY detect.sh /
 
 RUN apt-get update && apt-get install -y \
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
     libopencv-dev \
     tar \
     wget \
- && wget https://download.affectiva.com/linux/affdex-cpp-sdk-${AFFECTIVA_SDK_VERSION}-linux-64bit.tar.gz \
+ && wget https://download.affectiva.com/linux/affdex-cpp-sdk-${AFFECTIVA_SDK_VERSION}-ubuntu-xenial-xerus-x86_64bit.tar.gz \
  && mkdir /affdex-sdk \
  && tar -xzvf /affdex-cpp-sdk-*-linux-64bit.tar.gz -C /affdex-sdk \
  && rm /affdex-cpp-sdk-*-linux-64bit.tar.gz \
