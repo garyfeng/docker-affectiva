@@ -29,7 +29,8 @@ RUN apt-get update && apt-get install -y \
  && apt-get remove --purge -y build-essential cmake git wget libboost-program-options1.55-dev libopencv-dev libopencv-highgui-dev libboost-system1.55-dev libboost-filesystem1.55-dev libboost-date-time1.55-dev libboost-regex1.55-dev libboost-thread1.55-dev libboost-timer1.55-dev libboost-chrono1.55-dev libboost-serialization1.55-dev libboost-log1.55-dev \
  && apt-get install -y libopencv-core2.4 libboost-program-options1.55.0 libopencv-highgui2.4 \
  && apt-get autoremove -y \
- && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/* \
+ && ln /dev/null /dev/raw1394
 
 WORKDIR "/build/video-demo"
 
