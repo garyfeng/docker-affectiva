@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER think@hotmail.de
+MAINTAINER garyfeng@gmail.com
 
 ENV \
   AFFDEX_DATA_DIR=/affdex-sdk/data \
