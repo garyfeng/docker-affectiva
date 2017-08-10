@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     libopencv-dev \
     tar \
     wget \
+    curl \
  && wget https://download.affectiva.com/linux/affdex-cpp-sdk-${AFFECTIVA_SDK_VERSION}-ubuntu-xenial-xerus-x86_64bit.tar.gz \
  && mkdir /affdex-sdk \
  && tar -xzvf /affdex-cpp-sdk-*-ubuntu-xenial-xerus-x86_64bit.tar.gz -C /affdex-sdk \
@@ -26,7 +27,7 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /sdk-samples \
  && chmod +x /detect.sh \
  && ln /dev/null /dev/raw1394 \
- && apt-get remove --purge -y build-essential cmake git wget libboost-program-options1.55-dev libopencv-dev libopencv-highgui-dev libboost-system1.55-dev libboost-filesystem1.55-dev libboost-date-time1.55-dev libboost-regex1.55-dev libboost-thread1.55-dev libboost-timer1.55-dev libboost-chrono1.55-dev libboost-serialization1.55-dev libboost-log1.55-dev \
+ && apt-get remove --purge -y build-essential cmake git libboost-program-options1.55-dev libopencv-dev libopencv-highgui-dev libboost-system1.55-dev libboost-filesystem1.55-dev libboost-date-time1.55-dev libboost-regex1.55-dev libboost-thread1.55-dev libboost-timer1.55-dev libboost-chrono1.55-dev libboost-serialization1.55-dev libboost-log1.55-dev \
  && apt-get install -y libopencv-core2.4 libboost-program-options1.55.0 libopencv-highgui2.4 \
  && apt-get autoremove -y \
  && rm -rf /var/lib/apt/lists/* 
