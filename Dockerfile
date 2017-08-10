@@ -17,8 +17,8 @@ RUN apt-get update && apt-get install -y \
     wget \
  && wget https://download.affectiva.com/linux/affdex-cpp-sdk-${AFFECTIVA_SDK_VERSION}-ubuntu-xenial-xerus-x86_64bit.tar.gz \
  && mkdir /affdex-sdk \
- && tar -xzvf /affdex-cpp-sdk-*-linux-64bit.tar.gz -C /affdex-sdk \
- && rm /affdex-cpp-sdk-*-linux-64bit.tar.gz \
+ && tar -xzvf /affdex-cpp-sdk-*-ubuntu-xenial-xerus-x86_64bit.tar.gz -C /affdex-sdk \
+ && rm /affdex-cpp-sdk-*-ubuntu-xenial-xerus-x86_64bit.tar.gz \
  && git clone https://github.com/Affectiva/cpp-sdk-samples.git /sdk-samples \
  && mkdir build \
  && (cd build && cmake -DOpenCV_DIR=/usr/ -DBOOST_ROOT=/usr/ -DAFFDEX_DIR=/affdex-sdk /sdk-samples && make) \
